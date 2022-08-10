@@ -32,6 +32,14 @@ public class Ball {
         return position == ball.position && number == ball.number;
     }
 
+    public int getPosition() {
+        return position;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
     @Override
     public int hashCode() {
         return Objects.hash(position, number);

@@ -47,4 +47,14 @@ public class BallsTest {
                 .isNotEqualTo(ballList.get(2));
         assertThat(ballList.get(1)).isNotEqualTo(ballList.get(2));
     }
+
+    @Test
+    void 세자리수_1에서_9까지_생성() {
+        Balls balls = new Balls();
+        List<Ball> ballList = balls.getBallList();
+        for (int i = 0; i < 3; i++) {
+            assertThat(ballList.get(i).getNumber()).isGreaterThan(0);
+            assertThat(ballList.get(i).getNumber()).isLessThan(10);
+        }
+    }
 }
